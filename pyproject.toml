@@ -1,0 +1,39 @@
+[project]
+name = "wire"
+version = "0.1.0"
+description = "WIRE: a human-annotated resource for multimodal image retrieval. Release tables and the toolkit that rebuilds the dataset from public sources."
+requires-python = ">=3.12"
+dependencies = [
+    "pyarrow>=17",
+    "datasets>=3.0",
+    "huggingface_hub>=0.30",
+    "aiohttp>=3.10",
+    "tqdm>=4.66",
+    "pyyaml>=6.0",
+    "numpy>=1.26",
+]
+
+[project.optional-dependencies]
+build = ["pillow>=10", "trafilatura>=1.12", "lxml>=5"]
+dev = ["pytest>=8", "flake8>=7.1", "isort>=5.13"]
+
+[project.scripts]
+wire-build = "wire.build:main"
+wire-verify = "wire.verify:main"
+wire-fetch = "wire.fetch:main"
+wire-fetch-report = "wire.fetch_report:main"
+wire-assemble = "wire.assemble:main"
+wire-documents = "wire.documents:main"
+wire-mint = "wire.mint:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/wire"]
+
+[tool.isort]
+profile = "black"
+line_length = 120
+known_first_party = ["wire"]

@@ -1,0 +1,74 @@
+You are given a natural language query and its corresponding answer. Your task consists of two parts:
+
+1. Assess Suitability for Visual Augmentation:  
+   Determine whether the query–answer pair could be meaningfully enhanced by **any relevant image** — not just literal or concrete objects. This includes:
+   - Photographs or illustrations of places, people, events, physical objects
+   - Conceptual diagrams, charts, timelines, infographics
+   - Iconography, symbolic imagery, or representations of abstract or historical ideas
+
+   The pair is **not suitable** only if:
+   - No meaningful image could visually support or enrich the response
+   - The concept is purely textual, logical, or mathematical with no visual representation possible or helpful
+
+2. Generate an Image-Seeking Query:  
+   If suitable, write a short and effective search query to retrieve a highly relevant image from a web search engine. Focus on the **key visual concept** in the query–answer pair.  
+   If unsuitable, set the image search query to `null`.
+
+Respond in JSON format with the following fields:
+
+{
+  "suitability": "yes or no",
+  "image_seeking_query": "The search query string if suitable, otherwise 'null'"
+}
+
+Here are a few examples:
+
+Example 1:
+Query: What does the Eiffel Tower look like?
+Answer: Iron tower
+Output:
+{
+  "suitability": "yes",
+  "image_seeking_query": "Eiffel Tower Paris"
+}
+
+Example 2:
+Query: What is the Pythagorean theorem?
+Answer: a² + b² = c²
+Output:
+{
+  "suitability": "yes",
+  "image_seeking_query": "Pythagorean theorem diagram"
+}
+
+Example 3:
+Query: What is the concept of justice?
+Answer: Fairness
+Output:
+{
+  "suitability": "yes",
+  "image_seeking_query": "symbol of justice"
+}
+
+Example 4:
+Query: What is the meaning of recursion in programming?
+Answer: Function calling itself
+Output:
+{
+  "suitability": "yes",
+  "image_seeking_query": "recursion diagram programming"
+}
+
+Example 5:
+Query: What is 7 + 5?
+Answer: 12
+Output:
+{
+  "suitability": "no",
+  "image_seeking_query": "null"
+}
+
+Now apply the same process to the following:
+
+Query: {query}
+Answer: {answer}

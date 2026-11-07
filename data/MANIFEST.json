@@ -1,0 +1,30 @@
+{
+  "created": "2026-11-06T15:55:35Z",
+  "files": {
+    "wire_queries.parquet": {
+      "sha256": "0f9e5701cc32478dafa90923eb0abd64dd1fbf93b95ef38deb4beafcc970d302",
+      "rows": 13120,
+      "bytes": 653027
+    },
+    "wire_images.parquet": {
+      "sha256": "ba5d661f6994b339fe2ec53d9fc1ad1afa037511ab3b894b7ac4c222e9ea83e7",
+      "rows": 73480,
+      "bytes": 7158543
+    },
+    "wire_labels.parquet": {
+      "sha256": "2fbe923db7ef4a8e4ddbc9430eb905e5dad2fa515f3db41f4d27ce826945e928",
+      "rows": 77250,
+      "bytes": 1599076
+    },
+    "wire_mint.parquet": {
+      "sha256": "030367ca053d3c96195b5af69947537a1813b40e5840b28cd4d798c294b84a86",
+      "rows": 106049,
+      "bytes": 5908761
+    },
+    "wire_mint_pages.parquet": {
+      "sha256": "79fb0e50e76f8a34f161fd4670d74da2fc0b27ae2dae9f6ca9cad778dfd04550",
+      "rows": 122204,
+      "bytes": 2071118
+    }
+  }
+}

@@ -1,0 +1,14 @@
+__pycache__/
+*.pyc
+.venv/
+build/
+dist/
+*.egg-info/
+work/
+cache/
+images/
+pages/
+.claude/
+.DS_Store
+
+.temp/
