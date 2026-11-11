@@ -14,7 +14,7 @@ dependencies = [
 ]
 
 [project.optional-dependencies]
-build = ["pillow>=10", "trafilatura>=1.12", "lxml>=5"]
+build = ["pillow>=13.0.0", "trafilatura>=1.12", "lxml>=5"]
 dev = ["pytest>=8", "flake8>=7.1", "isort>=5.13"]
 
 [project.scripts]
